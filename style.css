@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.header-wrapper {
+    width: 100vw;
+    height: 80px;
+}
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 80px;
+    background: #66F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.logo {
+    font-weight: bold;
+    font-size: 30px;
+}
+.phone-menu {
+    width: 50px;
+    height: 50px;
+}
+header ul {
+    display: none;
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header ul li {
+    border-bottom: 2px solid transparent;
+}
+header ul li:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+.welcome {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background: linear-gradient(-45deg, #66F 50%, white 50%, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 20px solid #66F;
+}
+.welcome-img, .welcome-msg {
+    height: calc(50vh - 40px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pleco-img {
+    width: 200px;
+    height: 200px;
+    font-size: 140px;
+    border: 20px solid white;
+    background: #66F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: .5s;
+    animation: enter-fade 1s ease-in;
+}
+@keyframes enter-fade {from {opacity: 0;} to {opacity: 1;}}
+.pleco-img:hover {
+    width: 220px;
+    height: 220px;
+    font-size: 160px;
+}
+.msg {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.msg h1 {
+    align-self: center;
+    font-size: 80px;
+    color: white;
+}
+.msg h4 {
+    color: #333;
+}
+.msg h4 span {
+    color: white;
+    border-bottom: 2px solid white;
+}
+.msg h4 span:hover {
+    background: white;
+    color: #66F;
+}
+.features {
+    width: 100vw;
+    height: 100vh;
+    background: #66F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #66F;
+}
+.card::before {
+    content: '羊肉';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: white;
+    opacity: 0.8;
+    transform: translateX(-60px) translateY(20px) translateZ(-1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #66F8;
+}
+.card::after {
+    content: '牛肉';
+    position: absolute;
+    background: white;
+    color: black;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+    transform: translateX(60px) translateY(20px) translateZ(-1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #66F8;
+}
+.card-description {
+    color: white;
+    font-size: 20px;
+}
+.char-belt {
+    width: 100vw;
+    height: 80px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    color: #66F;
+}
+.char-belt svg {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 800px) {
+    .welcome {
+        flex-direction: row;
+    }
+    .welcome-msg, .welcome-img {
+        width: 50vw;
+    }
+    .pleco-img {
+        height: 55vh;
+        width: 55vh;
+        font-size: 32vh;
+    }
+    .pleco-img:hover {
+        height: 60vh;
+        width: 60vh;
+        font-size: 35vh;
+    }
+    .msg h1 {
+        font-size: 100px;
+    }
+    header ul {
+        display: flex;
+    }
+    .phone-menu {
+        display: none;
+    }
+}
