@@ -11,7 +11,12 @@
     <div class="header-wrapper">
         <header>
             <div class="logo">Pleco</div>
-            <svg class="w-6 h-6 phone-menu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg class="w-6 h-6" id="phone-menu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <div id="dropdown" class="hide">
+                <div class="dropdown-item">Pricing</div>
+                <div class="dropdown-item">Downloads</div>
+                <div class="dropdown-item">About</div>
+            </div>
             <ul>
                 <li>About</li>
                 <li>Pricing</li>
@@ -36,7 +41,7 @@
         <div class="card">
             雞肉
         </div>
-        <div class="card-description">Support over 200.000 of characters.</div>
+        <div class="card-description">Support over <u>200.000</u> of characters.</div>
     </div>
     <div class="char-belt">
         <p>English</p>
@@ -46,5 +51,7 @@
         </svg>
         <p>中文</p>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
